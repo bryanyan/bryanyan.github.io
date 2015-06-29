@@ -1,0 +1,141 @@
+@font-face {
+	font-family: "League Spartan";
+	src: url('LeagueSpartan-Bold.otf');
+}
+
+html {
+	font-family: "Lato";
+}
+
+.body, footer {
+    padding-left: 240px;
+}
+
+.head {
+	background-color: #e57373;
+	height: 225px;
+	color: white;
+	font-size: 2.5rem;
+}
+
+.name {
+	font-family: "Lato";
+	padding-left: 50px;
+}
+
+strong {
+	font-weight: 700;
+}
+
+i {
+	float: left;
+	font-size: 1.5rem;
+	padding-top: 21px;
+	padding-left: 10px;
+}
+
+.contact {
+	padding-left: 57px;
+	padding-top: 10px;
+}
+
+.email {
+	padding-left: 29px;
+}
+
+.icon {
+	width: 64px;
+	height: 64px;
+	background-color: #939393;
+	border-radius: 50%;
+	margin-left: 37px;
+	margin-top: 10px;
+	-webkit-transition: background-color 0.5s ease;
+	-moz-transition: background-color 0.5s ease;
+	transition: background-color 0.5s ease;
+}
+
+.icon:hover{
+	background-color: black;
+}
+
+
+.image {
+	vertical-align: middle;
+	padding-left: 1px;
+	padding-bottom: 4px;
+}
+
+#bot {
+	margin-left: 12px;
+}
+
+.overall {
+	margin-left: 240px;
+}
+
+.topbar {
+	height: 225px;
+	background-color: #ef5350;
+}
+
+h3 {
+	padding-left: 20px;
+	padding-top: 150px;
+	margin-top: 0px;
+	font-family: "Lato";
+	color: white;
+}
+
+.blurb {
+	width: 55%;
+	padding-left: 100px;
+	padding-top: 50px;
+	display: inline-block;
+}
+
+p {
+	font-size: 15px;
+	line-height: 20px;
+	margin-bottom: 5px;
+}
+
+.pic {
+	width: 300px;
+	display: inline-block;
+	float: right;
+	margin-top: 110px;
+	margin-right: 40px;
+}
+
+.fit {
+	height: 100%;
+	border-radius: 50%;
+}
+
+
+
+@media only screen and (max-width : 992px) {
+	header, .body, footer {
+      padding-left: 0;
+    }
+
+    .blurb {
+    	padding-left: 20px;
+    	padding-top: 12px;
+    }
+
+    .pic {
+    	margin-top: 20px;
+    	margin-right: 10px;
+    }
+
+}
+
+
+
+
+
+
+
+

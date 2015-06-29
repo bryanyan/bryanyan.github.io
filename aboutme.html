@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset = "utf-8">
+		<link rel = "stylesheet" href = "css/normalize.css">
+		<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+		<meta name= "viewport" content = "width=device-width, initial-scale=1">
+
+		<title> Bryan Yan </title>
+
+		<!--Favicon-->
+		<link rel = "shortcut icon" href = "icons/lambda.png">
+
+		<!--Import stylesheets-->
+		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="css/landing.css">
+		<link type="text/css" rel="stylesheet" href="css/styles.css">
+
+		<!--Fonts and icons-->
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400">
+		<link rel="stylesheet" href='http://fonts.googleapis.com/css?family=Lato:700'>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+	    <!--Javascript imports -->
+	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"> </script>
+	    <script type="text/javascript" src="js/materialize.js"> </script>
+	    <script type="text/javascript">
+	    	$(document).ready(function(){
+	    		$('.button-collapse').sideNav();
+	    		$('.icon').click(function() {
+      				$(this).css("background-color", "black");
+      			})
+	    	});
+	    </script>
+
+
+
+	</head>
+
+	<body>
+		<div class="sidebar"> 
+			<ul id="slide-out" class="side-nav fixed" style="width:240px">
+				<div class="head valign-wrapper">
+					<h4 class="name valign"> Bryan <strong> Yan </strong> </h4>
+				</div>
+				<li class="bold">
+					<i class="material-icons">person</i>
+					<a href="aboutme.html" class="waves-effect waves-red"> About Me </a>
+				</li>
+				<li class="bold">
+					<i class="material-icons">computer</i>
+					<a href="projects.html" class="waves-effect waves-red"> Projects </a>
+				</li>
+				<li class="bold">
+					<i class="material-icons">insert_drive_file</i>
+					<a href="resume.html" class="waves-effect waves-red"> Resume </a>
+				</li>
+				<div class="overlay">
+					<div class="bot valign-wrapper">
+						<h5 class="contact valign"> Contact Me </h5>
+					</div>
+					<div class="bot valign-wrapper">
+						<div class="icon valign-wrapper waves-effect waves-light">
+							<a href="mailto:bryanyan@andrew.cmu.edu">
+								<img id="mail" class="image" src="icons/mail-32.png">
+							</a>
+						</div>
+						<div class="icon valign-wrapper waves-effect waves-light">
+							<a href="http://www.github.com/bryanyan">
+								<img id="github" class="image" src="icons/git-32.png">
+							</a>
+						</div>
+					</div>
+					<div class="bot valign-wrapper">
+						<div class="icon valign-wrapper waves-effect waves-light" id="bot">
+							<a href="http://www.linkedin.com/pub/bryan-yan/a4/175/5a8">
+								<img id="linkedin" class="image" src="icons/linkedin-32.png">
+							</a>
+						</div>
+						<div class="icon valign-wrapper waves-effect waves-light" id="bot">
+							<a href="http://www.twitter.com/brbryanyan">
+								<img id="twitter" class="image" src="icons/twitter-32.png">
+							</a>
+						</div>
+						<div class="icon valign-wrapper waves-effect waves-light" id="bot">
+							<a href="http://instagram.com/br.yanyan">
+								<img id="instagram" class="image" src="icons/instagram-32.png">
+							</a>
+						</div>
+					</div>
+				</div>
+			</ul>
+			<a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+		</div>
+
+		<div class="body">
+
+			<header>
+				<div class="topbar">
+					<h3> About Me </h3>
+				</div>
+			</header>
+
+			<div class="blurb">
+				<h5 class="flow-text"> <strong> Hi, I'm Bryan! </strong> </h5>
+				<p> I'm currently a sophomore at Carnegie Mellon University majoring in Statistics and Machine Learning with prospective minors in Software Engineering and Architecture. </p>
+				<p> Coming into Carnegie Mellon, I had no prior exposure to programming or computer science and entered fully intending to dive into the business field. However, through hackathons and different classes, I have developed a passion for technology and business. I have learned so much in my first year at CMU and am excited to learn much more in the future. </p>
+				<p> In my free time I enjoy golfing, playing basketball, hiking, and doing yoga. </p>
+				<p> Thanks for visiting! </p>
+			</div>
+
+			<div class="pic">
+				<img src="static/profpic.jpg" class="fit responsive-img">
+			</div>
+		</div>
+
+
+
+	</body>
+
+</html>
+

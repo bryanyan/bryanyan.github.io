@@ -1,0 +1,49 @@
+@font-face {
+	font-family: "League Spartan";
+	src: url('LeagueSpartan-Bold.otf');
+}
+
+html, body {
+	font-family: "Lato";
+	font-weight: 400;
+	height: 100%;
+}
+
+
+h2 {
+	font-family: "League Spartan";
+	z-index: 10;
+	margin-bottom: 15%;
+	color: white;
+}
+
+.container {
+	max-width: none;
+}
+
+.full {
+	width: 100%;
+}
+
+.tool {
+	z-index: -1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.block {
+	height: 50%;
+}
+
+.space {
+	margin-top: 15px;
+}
+
+
+
+
