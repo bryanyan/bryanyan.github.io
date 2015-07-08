@@ -51,9 +51,9 @@ i {
 	border-radius: 50%;
 	margin-left: 37px;
 	margin-top: 10px;
-	-webkit-transition: background-color 0.5s ease;
-	-moz-transition: background-color 0.5s ease;
-	transition: background-color 0.5s ease;
+	-webkit-transition: background-color 0.75s ease;
+	-moz-transition: background-color 0.75s ease;
+	transition: background-color 0.75s ease;
 }
 
 .icon:hover{
@@ -136,9 +136,9 @@ p {
 	margin-bottom: 10px;
 	float: left;
 	display: block;
-	-webkit-transition: border-color 0.5s ease;
-	-moz-transition: border-color 0.5s ease;
-	transition: border-color 0.5s ease;
+	-webkit-transition: border-color 0.75s ease;
+	-moz-transition: border-color 0.75s ease;
+	transition: border-color 0.75s ease;
 }
 
 .projname {
@@ -146,9 +146,9 @@ p {
 	color: gray;
 	font-size: 20px;
 	margin-top: 60px;
-	-webkit-transition: color 0.5s ease;
-	-moz-transition: color 0.5s ease;
-	transition: color 0.5s ease;
+	-webkit-transition: color 0.75s ease;
+	-moz-transition: color 0.75s ease;
+	transition: color 0.75s ease;
 
 }
 
