@@ -9,6 +9,7 @@ html {
 
 .body, footer {
     padding-left: 240px;
+    height: 100%;
 }
 
 .head {
@@ -34,13 +35,13 @@ i {
 	padding-left: 10px;
 }
 
+.overlay {
+	width: 240px;
+}
+
 .contact {
 	padding-left: 57px;
 	padding-top: 10px;
-}
-
-.email {
-	padding-left: 29px;
 }
 
 .icon {
@@ -58,7 +59,6 @@ i {
 .icon:hover{
 	background-color: black;
 }
-
 
 .image {
 	vertical-align: middle;
@@ -87,10 +87,16 @@ h3 {
 	color: white;
 }
 
-.blurb {
-	width: 55%;
-	padding-left: 100px;
-	padding-top: 50px;
+.content {
+	position: absolute;
+	top: 225px;
+	bottom: 0;
+	width: calc(100% - 240px);
+}
+
+.leftside {
+	width: 50%;
+	margin-left: 5%;
 	display: inline-block;
 }
 
@@ -100,17 +106,63 @@ p {
 	margin-bottom: 5px;
 }
 
-.pic {
-	width: 300px;
+.rightside {
+	width: 50%;
 	display: inline-block;
 	float: right;
-	margin-top: 110px;
-	margin-right: 40px;
+	margin-left: 8%;
 }
 
 .fit {
-	height: 100%;
+	height: 50%;
 	border-radius: 50%;
+	padding-right: 2%;
+}
+
+.list-wrapper {
+	width: 100%;
+	height: 300px;
+}
+
+.project {
+	width: 200px;
+	height: 100%;
+	background-color: white;
+	border-style: solid;
+	border-color: gray;
+	border-radius: 10px;
+	margin-left: 6%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	float: left;
+	display: block;
+	-webkit-transition: border-color 0.5s ease;
+	-moz-transition: border-color 0.5s ease;
+	transition: border-color 0.5s ease;
+}
+
+.projname {
+	text-align: center;
+	color: gray;
+	font-size: 20px;
+	margin-top: 60px;
+	-webkit-transition: color 0.5s ease;
+	-moz-transition: color 0.5s ease;
+	transition: color 0.5s ease;
+
+}
+
+.project:hover {
+	border-color: #e57373;
+}
+
+.project:hover > .projname {
+	color: #e57373;
+}
+
+.projcon {
+	padding-top: 30px;
+	padding-left: 38px;
 }
 
 
@@ -120,17 +172,44 @@ p {
       padding-left: 0;
     }
 
-    .blurb {
-    	padding-left: 20px;
-    	padding-top: 12px;
+    .overlay {
+    	position: relative;
     }
 
-    .pic {
+    .content {
+    	width: 100%;
+    }
+
+    .leftside {
+    	height: 100%;
+    	width: 55%;
+    	padding-left: 20px;
+    	padding-top: 50px;
+    	display: inline-block;
+    }
+
+    .rightside {
     	margin-top: 20px;
     	margin-right: 10px;
+    	width: 300px;
+		display: inline-block;
+		float: right;
+    }
+
+    .fit {
+    	height: 100%;
     }
 
 }
+
+@media only screen and (min-width : 1281px) {
+	.overlay {
+		position: fixed;
+		bottom: 0;
+		padding-bottom: 10px;
+	}
+}
+
 
 
 
