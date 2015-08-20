@@ -19,6 +19,10 @@ html {
 	font-size: 2.5rem;
 }
 
+.space:hover {
+	background-color: #e57373;
+}
+
 .name {
 	font-family: "Lato";
 	padding-left: 50px;
