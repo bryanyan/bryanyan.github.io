@@ -48,6 +48,98 @@ h2 {
 	background-color: #e57373;
 }
 
+.home {
+	position: absolute;
+	right: 80px;
+	top: 40px;
+}
+
+div > a:hover {
+	color: red;
+}
+
+#graph {
+	height: 300px;
+	width: 300px;
+}
+
+#code {
+	height: 300px;
+	width: 500px;
+}
+
+.imgs {
+	float: left;
+	margin-left: 50px;
+}
+
+#data {
+	height: 400px;
+	width: 800px;
+	margin-left: 75px;
+}
+
+figure {
+	margin-left: 0px;
+	display: inline-block;
+}
+
+figure img {
+	vertical-align: top;
+}
+
+.frames > * {
+	float: left;
+	margin-left: 100px;
+	margin-top: 30px;
+}
+
+.bar-chart {
+	margin-left: 300px;
+	margin-bottom: 50px;
+}
+
+figcaption {
+	font-size: 16px !important;
+	font-weight: 700;
+	text-align: center;
+}
+
+#datacap {
+	margin-left: 75px;
+}
+
+.clear {
+	clear: left;
+}
 
 
+h5 > a:hover {
+	color: red;
+}
+
+canvas {
+	background: black;
+}
+
+svg {
+  margin: 2em 0;
+  font: 10px sans-serif;
+}
+
+.foreground {
+  fill: #2D6A99;
+}
+
+.background {
+  fill: #eee;
+}
+
+.resources {
+	clear: left;
+}
+
+.finish {
+	margin-bottom: 50px;
+}
 
