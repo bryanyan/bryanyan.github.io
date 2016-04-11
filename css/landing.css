@@ -123,16 +123,16 @@ canvas {
 }
 
 svg {
-  margin: 2em 0;
-  font: 10px sans-serif;
+  	margin: 2em 0;
+  	font: 10px sans-serif;
 }
 
 .foreground {
-  fill: #2D6A99;
+  	fill: #2D6A99;
 }
 
 .background {
-  fill: #eee;
+  	fill: #eee;
 }
 
 .resources {
@@ -142,4 +142,26 @@ svg {
 .finish {
 	margin-bottom: 50px;
 }
+
+.tooltip {
+  	background: #eee;
+  	box-shadow: 0 0 5px #999999;
+  	color: #333;
+  	font-size: 12px;
+ 	padding: 10px;
+  	text-align: center;
+  	width: 80px;
+  	z-index: 10;
+}
+
+.tooltip > p {
+	margin-top: 0px;
+}
+
+
+div > img {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
 
