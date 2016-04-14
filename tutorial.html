@@ -8,7 +8,7 @@
 		<title> Bryan Yan </title>
 
 		<!--Favicon-->
-		<link rel = "shortcut icon" href = "icons/lambda.png">
+		<link rel = "shortcut icon" href = "static/icons/lambda.png">
 
 		<!--Import stylesheets-->
 		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
@@ -22,7 +22,7 @@
 
 	    <!--Javascript imports -->
 	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"> </script>
-	    <script type="text/javascript" src="js/materialize.js"> </script>
+	    <script type="text/javascript" src="js/materialize.min.js"> </script>
 	    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 	    <script type="text/javascript" src="js/scripts.js"> </script>
 	    <script type="text/javascript">
@@ -36,10 +36,6 @@
 	<body>
 
 		<div class="container">
-
-			<div class="home">
-				<a href="aboutme.html" id="back"> Home </a>
-			</div>
 
 			<div class="heads">
 				<h1 style="margin-bottom: 0px"> D3.js Mini-Tutorial </h1>
@@ -62,7 +58,7 @@
 					<h5 style="color: gray"> The HTML </h5>
 					Inspecting the HTML of this graph, it actually looks fairly simple.
 
-					<img src="static/htmlPie.png" id="htmlPieCode"> </img>
+					<img src="static/d3Pics/htmlPie.png" id="htmlPieCode"> </img>
 
 					If it weren't for the path elements with complicated d attributes, you could definitely just hardcode this HTML.
 					D3 does all the d attribute value calculations for you, and nn a practical sense when working with larger non dummy datasets, writing this by hand seems less and less viable.
@@ -75,7 +71,7 @@
 					<h5 style="color: gray"> Step 1: Setting up the Graph </h5>
 					Let's start by defining some dimensions and some data for our piechart. <br> 
 
-					<img src="static/dimData.png" id="dimDataCode"> </img> <br>
+					<img src="static/d3Pics/dimData.png" id="dimDataCode"> </img> <br>
 
 					This is fairly self explanatory. The width and height of our graph are both 400px, and since it's a circle, we define a radius. 
 					The data is a simple array of objects with a color and percentage property. You'll see how we access and use this data later on.
@@ -87,7 +83,7 @@
 				<div class="step3">
 					<h5 style="color: gray"> Step 2: Creating the Graph </h5>
 
-					<img src="static/step2.png" id="colorCode"> </img> <br>
+					<img src="static/d3Pics/step2.png" id="colorCode"> </img> <br>
 
 					The variable color is just a color scale provided by D3. You can read about ordinal scales <a href="https://github.com/mbostock/d3/wiki/Ordinal-Scales"> here. </a> <br>
 					The arc variable is how we define the radius using D3's <a href="https://github.com/mbostock/d3/wiki/SVG-Shapes#arc"> svg.arc() </a> function as well as the outerRadius() method using the radius we established earlier. <br>
@@ -101,7 +97,7 @@
 				<div class="finalstep">
 					<h5 style="color: gray"> Step 3: Filling the Graph: Final Steps </h5>
 
-					<img src="static/step3.png" id="finalStep" style="width: 599px;"> </img> <br>
+					<img src="static/d3Pics/step3.png" id="finalStep" style="width: 599px;"> </img> <br>
 
 					First, we select all path elements inside our g element. Right now, there are none but we will create them. The .data() method is how we pass in our predefined data and how we associate every slice of the pie (path elements) with the appropriate data. We pass this into our pie function above which grabs the values. The <a href="https://github.com/mbostock/d3/wiki/Selections#enter"> .enter() </a> method creates placeholders for every value in our data, and then we use .append() to replace them with the correct path elements. We define the d attribute using the arc function defined above and then using our color scale, we fill each slice of the pie. When we hover (or mouseover) the elements, a tooltip will pop up and when we remove our mouse the tooltip will disappear.
 				</div>

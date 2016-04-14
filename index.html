@@ -1,67 +1,58 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 	<head>
-		<meta charset = "utf-8">
-		<link rel = "stylesheet" href = "css/normalize.css">
-		<meta http-equiv = "X-UA-Compatible" content = "IE=edge">
-		<meta name= "viewport" content = "width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<title> Bryan Yan </title>
 
 		<!--Favicon-->
-		<link rel = "shortcut icon" href = "icons/lambda.png">
+		<link rel="shortcut icon" href="static/icons/lambda.png">
 
 		<!--Import stylesheets-->
 		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-		<link type="text/css" rel="stylesheet" href="css/landing.css">
+		<link type="text/css" rel="stylesheet" href="css/main.css">
 
 		<!--Fonts-->
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400">
-		<link rel = "stylesheet" href='http://fonts.googleapis.com/css?family=Lato:700'>
-
 
 	    <!--Javascript imports -->
 	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"> </script>
-	    <script type="text/javascript" src="js/materialize.js"> </script>
+	    <script type="text/javascript" src="js/materialize.min.js"> </script>
 
 	    <script type="text/javascript">
-	    	$(document).ready(function(){
+	    	$(document).ready(function() {
       			$('.slider').slider({full_width: true});
-      			$('#enter').click(function() {
-      				$('#enter').removeClass("grey lighten-2")
-      				$('#enter').addClass("red lighten-2");
-      			})
     		});
     	</script>
 
 	</head>
 
 	<body>
+
 		<div class="container valign-wrapper tool">
-			<h2 class = "center-align full"> Bryan Yan </h2>
-			<div class = "slider fullscreen">
+			<h2 class="center-align full"> Bryan Yan </h2>
+			<div class="slider fullscreen">
 				<ul class="slides">
 	      			<li>
-	        			<img src="static/mpback.JPG"> 
+	        			<img src="static/backgroundPics/mpback.JPG"> 
 	      			</li>
 	      			<li>
-	      				<img src="static/chiback.JPG">
+	      				<img src="static/backgroundPics/pghback.png">
 	      			</li>
 	      			<li>
-	    				<img src="static/sfback.JPG">
+	    				<img src="static/backgroundPics/sfback.JPG">
 	    			</li>
 	      			<li>
-	      				<img src="static/pghback.png">
+	      				<img src="static/backgroundPics/chiback.JPG">
 	      			</li>
 	      		</ul>
 	      	</div>
       	</div>
 
-      	<div class = "container block"> </div>
+      	<div class="center-align full"> </div>
 
-      	<div class = "center-align full">
-			<a class="waves-effect waves-red btn grey lighten-2 center-align space" id="enter" href="aboutme.html">Enter </a>
-		</div>
     </body>
 </html>
 
