@@ -20,21 +20,49 @@ html {
     bottom: 0;
 }
 
-.slider.fullscreen {
-	z-index: -1;
-}
 
 h2 {
 	font-family: "League Spartan";
 	z-index: 10;
 	color: white;
+	margin-bottom: 50px;
+}
+
+.slider.fullscreen {
+	z-index: -1;
 }
 
 .indicators {
 	display: none;
 }
 
+.content {
+	margin-top: 15%;
+}
+
+li {
+	display: inline;
+}
+
 .icons {
-	height: 32px;
-	width: 32px;
+	width: 64px;
+	height: 64px;
+	background-color: #939393;
+	border-radius: 50%;
+	margin-left: 50px;
+	-webkit-transition: background-color 0.75s ease;
+	-moz-transition: background-color 0.75s ease;
+	transition: background-color 0.75s ease;
+}
+
+.icons:hover{
+	background-color: black;
+}
+
+#github, #mail, #instagram {
+	margin-top: 15px;
+}
+
+#linkedin {
+	margin-top: 13px;
 }
