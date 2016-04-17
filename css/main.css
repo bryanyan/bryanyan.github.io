@@ -79,3 +79,11 @@ li {
 }
 
 
+@media only screen and (max-width : 1281px) {
+
+	#linkedinMedia {
+		margin-top: 10px;
+	}
+}
+
+
