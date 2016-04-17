@@ -20,7 +20,6 @@ html {
     bottom: 0;
 }
 
-
 h2 {
 	font-family: "League Spartan";
 	z-index: 10;
@@ -44,12 +43,16 @@ li {
 	display: inline;
 }
 
+.icon-wrapper {
+	margin-right: 30px;
+}
+
 .icons {
 	width: 64px;
 	height: 64px;
 	background-color: #939393;
 	border-radius: 50%;
-	margin-left: 50px;
+	margin-left: 40px;
 	-webkit-transition: background-color 0.75s ease;
 	-moz-transition: background-color 0.75s ease;
 	transition: background-color 0.75s ease;
@@ -59,10 +62,20 @@ li {
 	background-color: black;
 }
 
-#github, #mail, #instagram {
+.second-row {
+	margin-top: 15px;
+	margin-left: 5px;
+}
+
+
+/* Improper CSS here with ids, but whatever */
+
+#github, #mail, #instagram, #aboutme, #resume {
 	margin-top: 15px;
 }
 
-#linkedin {
+#linkedin, #soundcloud {
 	margin-top: 13px;
 }
+
+
