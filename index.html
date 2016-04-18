@@ -6,14 +6,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title> Bryan Yan </title>
 		<link rel="shortcut icon" href="static/icons/lambda.png">
-		<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
 		<link type="text/css" rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400">
 	    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"> </script>
-	    <script type="text/javascript" src="js/materialize.min.js"> </script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
 	    <script type="text/javascript">
 	    	$(document).ready(function() {
       			$('.slider').slider({full_width: true});
+    			$('.modal-trigger').leanModal({
+      				dismissible: true, // Modal can be dismissed by clicking outside of the modal
+			      	opacity: 0.5, // Opacity of modal background
+			      	in_duration: 300, // Transition in duration
+			      	out_duration: 200, // Transition out duration
+    			})
     		});
     	</script>
 	</head>
@@ -22,16 +28,22 @@
 			<div class="slider fullscreen">
 				<ul class="slides">
 	      			<li>
-	        			<img src="static/backgroundPics/mpback.JPG"> 
+	        			<img src="static/backgroundPics/mpback.jpg"> 
 	      			</li>
 	      			<li>
+	      				<img src="static/backgroundPics/nyback.jpg">
+	      			</li>
+	      			<li>
+	    				<img src="static/backgroundPics/sfback.jpg">
+	    			</li>
+	    			<li>
 	      				<img src="static/backgroundPics/pghback.png">
 	      			</li>
 	      			<li>
-	    				<img src="static/backgroundPics/sfback.JPG">
-	    			</li>
+	      				<img src="static/backgroundPics/chiback.jpg">
+	      			</li>
 	      			<li>
-	      				<img src="static/backgroundPics/chiback.JPG">
+	      				<img src="static/backgroundPics/sfgarden.jpg">
 	      			</li>
 	      		</ul>
 	      	</div>
@@ -39,47 +51,70 @@
 				<h2 class="center-align"> Bryan Yan </h2>
 		      	<div class="center-align">
 		      		<ul class="icon-wrapper">
-		      			<li class="icons waves-effect waves-light">
-							<a href="#">
-								<img src="static/icons/info-32.png" class="iconImg" id="aboutme">		      				
-		      				</a>
-		      			</li>
-		      			<li class="icons waves-effect waves-light">
-		      				<a href="static/BRYAN_YAN_RESUME.pdf">
-		      					<img src="static/icons/resume-32.png" class="iconImg" id="resume">
-		      				</a>
-		      			</li>
-		      			<li class="icons waves-effect waves-light">
-		      				<a href="https://www.github.com/bryanyan">
-		      					<img src="static/icons/git-32.png" class="iconImg" id="github">
-		      				</a>
-		      			</li>
-		      			<li class="icons waves-effect waves-light" id="linkedinMedia">
-		      				<a href="https://www.linkedin.com/in/bryanyan96">
-		      					<img src="static/icons/linkedin-32.png" class="iconImg" id="linkedin">
-		      				</a>
-		      			</li>
-		      			<div class="second-row">
-		      				<li class="icons waves-effect waves-light">
-			      				<a href="mailto:bryanyan@andrew.cmu.edu">
-			      					<img src="static/icons/mail-32.png" class="iconImg" id="mail">
-			      				</a>
-		      				</li>
-		      				<li class="icons waves-effect waves-light">
-			      				<a href="https://www.instagram.com/br.yanyan">
-			      					<img src="static/icons/instagram-32.png" class="iconImg" id="instagram">
-			      				</a>
-		      				</li>
+		      			<a class=modal-trigger href="#modal1">
 			      			<li class="icons waves-effect waves-light">
-			      				<a href="https://soundcloud.com/bryan-yan-416151273">
-			      					<img src="static/icons/soundcloud-32.png" class="iconImg" id="soundcloud">
-			      				</a>
+								<img src="static/icons/info-32.png" class="iconImg" id="aboutme">		      				
 			      			</li>
+		      			</a>
+						<a href="static/BRYAN_YAN_RESUME.pdf">
+		      				<li class="icons waves-effect waves-light">
+		      					<img src="static/icons/resume-32.png" class="iconImg" id="resume">
+		      				</li>
+		      			</a>
+		      			<a href="https://www.github.com/bryanyan">
+		      				<li class="icons waves-effect waves-light">
+		      					<img src="static/icons/git-32.png" class="iconImg" id="github">
+		      				</li>
+		      			</a>
+		      			<a href="https://www.linkedin.com/in/bryanyan96">
+		      				<li class="icons waves-effect waves-light" id="linkedinMedia">
+		      					<img src="static/icons/linkedin-32.png" class="iconImg" id="linkedin">
+		      				</li>
+		      			</a>
+		      			<div class="second-row">
+		      				<a href="mailto:bryanyan@andrew.cmu.edu">
+		      					<li class="icons waves-effect waves-light">
+			      					<img src="static/icons/mail-32.png" class="iconImg" id="mail">
+		      					</li>
+		      				</a>
+			      			<a href="https://www.instagram.com/br.yanyan">
+		      					<li class="icons waves-effect waves-light">
+			      					<img src="static/icons/instagram-32.png" class="iconImg" id="instagram">
+		      					</li>
+		      				</a>
+			      			<a href="https://soundcloud.com/bryan-yan-416151273">		      				
+			      				<li class="icons waves-effect waves-light">
+			      					<img src="static/icons/soundcloud-32.png" class="iconImg" id="soundcloud">
+			      				</li>
+			      			</a>
 		      			</div>
 		      		</ul>
 		      	</div>
 	      	</div>
-      </div>
+      	</div>
+	  	<div id="modal1" class="modal">
+    		<div class="modal-content">
+      			<h4 id="modalHeader">Hi, I'm Bryan!</h4>
+				<p class="modalText">
+					I'm currently a junior at <b> Carnegie Mellon University </b> majoring
+					in <b> Statistics and Machine Learning with a minor in Software Enginering. </b>
+				</p>
+				<p class="modalText">
+					Coming into Carnegie Mellon, I had no prior exposure to programming or computer science.
+					However, through various hackathons, courses, and extracurriculars, I have developed a
+					passion for technology, business, and design. I am currently working as a <b> Front End Software
+					Engineering Intern </b> for the <a href="http://www.sailing.cs.cmu.edu/main/?page_id=275"> Center of Machine Learning and Health </a> and as a <b> Software Developer </b> for the 
+					<a href="http://lunar.cs.cmu.edu/about-us#lunar-pioneering"> CMU Google Lunar X-Prize Team</a>, while completing a <b> developer evangelist program </b> at <a href="http://blog.clarifai.com/introducing-the-clarifai-champions/#.VxRlfRIrLaY"> Clarifai. </a> This summer I will be working as a <b> Software Engineering Intern </b> at 
+					<a href="https://www.roku.com/"> Roku. </a>
+				</p>
+				<p class="modalText">
+					In my free time I enjoy lifting, running, golfing, and watching basketball (Go Heat!). I especially enjoy hiking and nature; all pictures in the background slideshow are my own, unedited, and taken with an iPhone.
+				</p>
+				<p class="modalText">
+					Feel free to connect with me on <a href="https://www.linkedin.com/in/bryanyan96"> LinkedIn </a> or send me an <a href="mailto:bryanyan@andrew.cmu.edu"> email. </a> Thanks for visiting!
+				</p>
+			</div>
+		</div>
     </body>
 </html>
 
