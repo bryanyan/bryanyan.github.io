@@ -27,8 +27,43 @@ h2 {
 	margin-bottom: 50px;
 }
 
-.slider.fullscreen {
+.fullscreen {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	z-index: -1;
+}
+
+.fullscreen ul.images {
+	height: 100%;
+}
+
+.fullscreen .images li img {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.images {
+	background-color: #9e9e9e;
+	margin: 0;
+	height: 100%;
+}
+
+.bg {
+	opacity: 1 !important;
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: inherit;
+	overflow: hidden;
 }
 
 .indicators {
