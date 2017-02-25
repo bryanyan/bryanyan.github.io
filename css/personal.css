@@ -16,6 +16,7 @@ body {
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: white;
 }
 body::before {
   content: '';
@@ -137,7 +138,7 @@ body::before {
   /* IE Fallback */
   border-left: 5px solid rgba(255, 255, 255, 0.8);
 }
-#weather {
-	color: white;
+.city {
+  float: left;
 }
 

@@ -14,6 +14,7 @@
         $(function() {
 
             if (typeof(Storage) !== "undefined") {
+              console.log(localStorage, 'lol whats the storage')
                 if (localStorage.todo) {
                     var todoArr = ['ay carumba', 'testing', 'fix this later thx'];
                 } else {
@@ -40,35 +41,105 @@
             });
 
             /* Fremont: 2407405 */
-            /* San Francisco: 2487956 */
-            /* Pittsburgh: 2473224 */
             $.simpleWeather({
               woeid: '2407405', 
               location: '',
               unit: 'f',
               success: function(weather) {
-                html = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
-                html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
-                html += '<li class="currently">'+weather.currently+'</li>';
-                html += '<ul>'
+                htmlFMT = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+                htmlFMT += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+                htmlFMT += '<li class="currently">'+weather.currently+'</li>';
+                htmlFMT += '<ul>'
                 for(var i = 0; i < 5; i++) {
-                  html += '<li class="fiveDay">'+weather.forecast[i].day+': '+weather.forecast[i].high+'</li>';
+                  htmlFMT += '<li class="fiveDay">'+weather.forecast[i].day+': '+weather.forecast[i].high+'</li>';
                 }
-                html += '</ul>'
-            
-                $("#weather").html(html);
+                htmlFMT += '</ul>'
+                htmlFMT += '<img src=' + weather.thumbnail + '>'
+                $("#fmt").html(htmlFMT);
               },
               error: function(error) {
-                $("#weather").html('<p>'+error+'</p>');
+                $("#fmt").html('<p>'+error+'</p>');
               }
             });
+
+            /* San Francisco: 2487956 */
+            $.simpleWeather({
+              woeid: '2487956', 
+              location: '',
+              unit: 'f',
+              success: function(weather) {
+                htmlSFO = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+                htmlSFO += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+                htmlSFO += '<li class="currently">'+weather.currently+'</li>';
+                htmlSFO += '<ul>'
+                for(var i = 0; i < 5; i++) {
+                  htmlSFO += '<li class="fiveDay">'+weather.forecast[i].day+': '+weather.forecast[i].high+'</li>';
+                }
+                htmlSFO += '</ul>'
+            
+                $("#sfo").html(htmlSFO);
+              },
+              error: function(error) {
+                $("#sfo").html('<p>'+error+'</p>');
+              }
+            });
+
+            /* Pittsburgh: 2473224 */
+            $.simpleWeather({
+              woeid: '2473224', 
+              location: '',
+              unit: 'f',
+              success: function(weather) {
+                htmlPGH = '<h2>'+weather.temp+'&deg;'+weather.units.temp+'</h2>';
+                htmlPGH += '<ul><li>'+weather.city+', '+weather.region+'</li>';
+                htmlPGH += '<li class="currently">'+weather.currently+'</li>';
+                htmlPGH += '<ul>'
+                for(var i = 0; i < 5; i++) {
+                  htmlPGH += '<li class="fiveDay">'+weather.forecast[i].day+': '+weather.forecast[i].high+'</li>';
+                }
+                htmlPGH += '</ul>'
+            
+                $("#pgh").html(htmlPGH);
+              },
+              error: function(error) {
+                $("#pgh").html('<p>'+error+'</p>');
+              }
+            });
+
+            var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ]; 
+
+            var dayNames= ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+
+            // Create an object newDate()
+            var newDate = new Date();
+            // Retrieve the current date from the Date object
+            newDate.setDate(newDate.getDate());
+            // At the output of the day, date, month and year    
+            $('#Date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
+
+            var minutes = newDate.getMinutes();
+            $(".min").html(( minutes < 10 ? "0" : "" ) + minutes);
+            var hours = newDate.getHours();
+            $(".hours").html(( hours < 10 ? "0" : "" ) + hours);
 
         });
         </script>
     </head>
     <body>
         <script src="https://www.reddit.com/r/frugalmalefashion.embed?limit=27" type="text/javascript"></script>
-        <div id="weather"> </div>
+        <div class="weather">
+          <div class="city" id="fmt"> </div>
+          <div class="city" id="sfo"> </div>
+          <div class="city" id="pgh"> </div>
+        </div>
+        <div class="clock">
+          <div id="Date"></div>
+          <div>
+              <div class="hours"></div>
+              <div class="point">:</div>
+              <div class="min"></div>
+          </div>
+        </div>
         <div class="list">
             <h1> TO DO
                 <a class="add" href="#">
