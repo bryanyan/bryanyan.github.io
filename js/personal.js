@@ -2,7 +2,7 @@ function submitTask(task) {
   var count = 0;
   $(document).keypress(function(e) {
     count += 1;
-    if (e.which == 13 && count == 1) {
+    if (e.which === 13 && count === 1 && task.value.replace(/\s/g, "") !== "") {
       $("#listItems").add( "<li><a href='#'><div class='fa fa-check'></div></a> " + task.value + "</li>" ).fadeIn().appendTo("#listItems");
       var todoArr = JSON.parse(localStorage.todo);
       todoArr.push(task.value);
