@@ -7,4 +7,3 @@
 * Input field for todo list, add to local storage and display. 
 * Removal from local storage on click of checkmark button
 * Integrate google calendar
-* Display time (like how momentum does it)
